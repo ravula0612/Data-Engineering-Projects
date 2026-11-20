@@ -1,0 +1,39 @@
+name: Cargo Medallion tests
+
+on:
+  push:
+    paths:
+      - cargo-medallion/**
+      - .github/workflows/cargo-medallion.yml
+  pull_request:
+    paths:
+      - cargo-medallion/**
+      - .github/workflows/cargo-medallion.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  spark:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: cargo-medallion
+    env:
+      SPARK_LOCAL_IP: 127.0.0.1
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: cargo-medallion/requirements-dev.txt
+      - run: python -m pip install -r requirements-dev.txt
+      - run: python -m compileall -q src tests
+      - run: python -m unittest discover -s tests -v

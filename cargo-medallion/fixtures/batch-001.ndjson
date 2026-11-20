@@ -1,0 +1,7 @@
+{"event_id":"E01","shipment_id":"S01","event_ts":"2026-05-03T08:00:00Z","origin":"DFW","destination":"LHR","event_type":"BOOKED"}
+{"event_id":"E02","shipment_id":"S01","event_ts":"2026-05-03T10:00:00Z","origin":"DFW","destination":"LHR","event_type":"DEPARTED"}
+{"event_id":"E03","shipment_id":"S02","event_ts":"2026-05-03T12:30:00Z","origin":"HYD","destination":"SIN","event_type":"BOOKED"}
+{"event_id":"E04","shipment_id":"S02","event_ts":"2026-05-03T23:15:00-05:00","origin":"HYD","destination":"SIN","event_type":"DELIVERED"}
+{"event_id":"E05","shipment_id":"S03","event_ts":"2026-05-03T13:00:00Z","origin":"DFW","destination":"LHR","event_type":"ARRIVED"}
+{"event_id":"E06","shipment_id":"S04","event_ts":"2026-05-03T14:00:00Z","origin":"DFW","destination":"DFW","event_type":"DEPARTED"}
+{"event_id":

@@ -1,0 +1,22 @@
+bundle:
+  name: cargo_medallion
+  databricks_cli_version: ">= 0.253.0"
+
+include:
+  - resources/*.yml
+
+variables:
+  catalog:
+    description: Existing Unity Catalog catalog for the demo.
+  schema:
+    description: Existing, dedicated demo schema.
+  volume:
+    description: Managed volume created by the seed task if absent.
+    default: cargo_landing
+
+targets:
+  demo:
+    default: true
+    mode: production
+    workspace:
+      root_path: /Workspace/Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}/${var.catalog}/${var.schema}

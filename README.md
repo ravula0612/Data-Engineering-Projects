@@ -29,3 +29,5 @@
 7. <ins> Capstone Project </ins> :heavy_check_mark:  
 * This project is the finale to Udacity's data engineering nanodegree. Udacity provides a default dataset however I chose to embark on my own project. 
 * My project is on building a movies data warehouse, which can be used to build a movies recommendation system, as well as predicting box-office earnings. View the project here: [Movies Data Warehouse](https://github.com/alanchn31/Udacity-Data-Engineering-Capstone)
+
+8. [Cargo Medallion Lakehouse](cargo-medallion/) — Databricks Auto Loader, Spark Declarative Pipelines, Unity Catalog and Lakeflow Jobs for synthetic cargo events. [Architecture](cargo-medallion/docs/architecture.md)
